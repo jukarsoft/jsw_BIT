@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Descomposición de fechas</title>
+	<style type="text/css">
+		
+		#formulario {
+			width: 1000px;
+			background-color: lightyellow;
+			border: 2px solid blue;
+			margin: 15px;
+			padding: 25px;
+
+		}
+		#salida {
+			width: 100%;
+		}
+
+	</style>
+
+	<script type="text/javascript" src='js/jsw018_2Fecha.js'></script>
+</head>
+<body>
+
+</body>
+	<main>
+
+		<form id="formulario">
+			<label>Fecha: </label>
+			<input type="date" name="fecha" placeholder="introduce fecha" id="fecha" required>
+			<br><br>
+			<input type="button" name="calcular" value="ENVIAR" onclick="descomponerFecha()">
+			<br><br>
+			<input type="text" name="Salida" id="salida" disabled>
+	 		<br>
+		</form>
+	</main>
+</html>

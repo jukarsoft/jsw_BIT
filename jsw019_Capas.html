@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tratamiento de capas</title>
+	<style type="text/css">
+		
+	</style>
+
+	<script type="text/javascript">
+		i=true;
+
+
+		function accionCapa1 (div2) {
+			var div1 = document.getElementById('capa1');
+			var div2 = document.getElementById('capa2');
+			console.log(div1);
+			console.log(div2);
+			//cambia color de la segunda capa
+			var num=parseInt(Math.random() * (256 - 0) + 1);
+				
+			div2.style.backgroundColor = 'rgba(' + num + ',128,0,0.9)';
+
+
+		}
+
+
+		function accionCapa2 (div2) {
+			var div1 = document.getElementById('capa1');
+			var div2 = document.getElementById('capa2');
+			console.log(div2);
+			console.log(div1);
+			//cambia color de la segunda capa
+			var num=parseInt(Math.random() * (256 - 0) + 1);
+			div1.style.backgroundColor = 'rgba(' + num + ',191,255,0.7)';
+			
+			if (i==true) {
+				document.getElementById('capa1').innerText='hola mundo';
+				i=false;
+			} else {
+				document.getElementById('capa1').innerText='cambia color'
+				i=true;
+			}
+			
+			
+		}
+	</script>
+</head>
+<body>
+
+	<div id="capa1" style="background-color: cyan; width: 200px; height: 50px" onclick="accionCapa1()">HOLA DIV 1</div><br>
+	<div id="capa2" style="background-color: yellow; width: 200px; height: 50px" onmouseover="accionCapa2()"></div><br>
+
+</body>
+</html>

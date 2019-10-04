@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta lang="es">
+	<meta name="description" content="Control HTML y CSS3"> 
+	<meta name="description" content="Free Web tutorials">
+  	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  	<meta name="author" content="Juan Carlos">
+	<title>prompt</title>
+
+	<script type="text/javascript">
+		var continuar=true;
+		var cadena="";
+		do {
+			intro=prompt('introduce una cadena de texto:');
+			cadena+=intro + ' - ';
+
+			continuar=confirm(`¿quieres seguir con otra cadena? `);
+		} while (continuar);
+		document.write ('cadena de texto introducida <br>');
+		document.write(`${cadena} <br>`)	
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

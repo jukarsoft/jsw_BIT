@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>arrays</title>
+
+
+<script type="text/javascript">
+	var clasificaciones = new Array('Ana', 'Oswaldo', 'Raúl', 'Celia', 'María', 'Antonio');
+		//clasificación actual
+	document.write(`1- clasificación actual...: <br> ${clasificaciones} <br>`);
+	document.write('<br>');
+	//cambia clasificación Celia pasa delante de Raúl
+	var temp=clasificaciones[2];
+	clasificaciones [2]=clasificaciones [3];
+	clasificaciones [3]=temp;
+	document.write(`2- cambia clasificación entre celia y raul ...: <br> ${clasificaciones} <br>`);
+	document.write('<br>');
+	//Añade dos nuevos participantes después de Ana y antes de Oswaldo
+	clasificaciones.splice(1,0, 'Roberto', 'Amaya');
+	document.write(`3- Inserta dos nuevos participantes entre ana y oswaldo ...:<br> ${clasificaciones} <br>`);
+	document.write('<br>');
+	//añade un nuevo concursante en el puesto primero
+	clasificaciones.unshift('Marta');
+	document.write(`4- Inserta en primer lugar a Marta...:<br> ${clasificaciones} <br>`);
+	document.write('<br>');
+
+	document.write (`clasificación final <br>`);
+	for (i=0;i<clasificaciones.length;i++) {
+		document.write (`${i+1} - ${clasificaciones [i]} <br>`);
+	}
+</script>
+	
+</head>
+<body>
+
+</body>
+</html>

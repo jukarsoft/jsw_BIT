@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calcular letra dni por una función y con un formulario</title>
+
+	<style type="text/css">
+		main {
+			border: 2px solid blue;
+		}
+		label {
+			width: 250px;
+			display: inline-block;
+			line-height: 65px;
+		}
+
+		input {
+			width: 280px;
+
+		}
+		.formulario {
+			width: 700px;
+			
+			border: 1px solid blue;
+			background-color: lightgrey;
+			margin:auto;
+			padding: 25px;
+			box-shadow: 5px solid blue;
+		}
+		.bordes {
+			border-radius: 10px;
+			box-shadow: 4px 3px 6px black;
+			}
+		.input {
+			display: flex;
+			margin:auto;
+			width: 80px;
+
+		}
+
+	</style>
+
+	<script type="text/javascript">
+			//definir array
+			var letra = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'];
+			//funcion calcular la letra
+			function calcularLetraDNI() {
+				// recuperar numero de formulario
+				
+
+				var dni = document.getElementById('dni').value;
+				alert(dni);
+				//comprobar valores
+				if (dni<0 || dni>99999999) {
+					document.getElementById('dni2').value = 'no es un DNI válido';
+				}else {
+					//calcular letra
+					var posicion = parseInt(dni%23);
+					alert('resultado ' + posicion);
+					//buscar en array
+					letraDNI=letra [posicion];
+					alert('letra ' + letraDNI);
+					//concatenar Dni y letra
+					var dni2=dni + letraDNI;
+					//poner dni al formulario
+					document.getElementById('dni2').value = dni2;
+				}
+
+				//bucle???
+			}
+	</script>
+</head>
+<body>
+	<main>
+		<form class="formulario bordes" method="get" action="#">
+			<label>DNI</label>
+			<input type="number" name="dni" placeholder="introduce el DNI sin la letra" id="dni" required min=0 max=99999999>
+			<br>
+			<label >DNI con su letra</label>
+			<input type="text" name="dni2" placeholder="" id="dni2" disabled >
+			<input class="input" type="button" name="envio" value="Envia DNI a comprobar" width="250" required onclick="calcularLetraDNI()">
+			<br>
+			<br>
+		</form>
+	</main>
+</body>
+</html>

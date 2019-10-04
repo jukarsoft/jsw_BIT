@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>lista de números x función</title>
+
+
+<script type="text/javascript">
+	
+	var numero;
+	var resultado;
+
+
+	
+	numero=parseInt(prompt('dime un número primero'));
+	
+	//función cuenta
+	function numPrimo (num1){
+	//esta función hace un bucle y lista hasta los numeros indicados
+		var i=2;
+		var primo=true;
+		while (i<num1) {
+			if (num1%i == 0) {
+				primo=false;
+			}
+			i++;
+		}
+
+		return primo;
+	}	
+	//llama la función
+	resultado=numPrimo(numero);
+	document.write(`numero primo: ${resultado}`)
+
+</script>
+	
+</head>
+<body>
+
+</body>
+</html>

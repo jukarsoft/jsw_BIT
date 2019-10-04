@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta lang="es">
+	<meta name="description" content="Control HTML y CSS3"> 
+	<meta name="description" content="Free Web tutorials">
+  	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  	<meta name="author" content="Juan Carlos">
+	<title>prompt</title>
+
+	<script type="text/javascript">
+		var edad;
+
+		edad=prompt('dime tu edad');
+		if (isNaN(edad) || edad < 0 || edad > 100)
+		{
+			alert(`no es un dato aceptado (edad entre 0 y 100`);
+		} else if (edad >= 18) {
+				alert('¡¡¡ya puedes conducir!!!');
+		} else {
+			alert('¡¡¡lo siento no eres mayor de edad para conducir!!!');
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>

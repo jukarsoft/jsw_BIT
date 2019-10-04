@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculadora</title>
+	<style type="text/css">
+		
+		#formulario {
+			width: 700px;
+			background-color: lightyellow;
+			border: 2px solid blue;
+			margin:35px;
+			padding: 35px;
+
+		}
+
+	</style>
+
+	<script type="text/javascript">
+		//crear una función para capturar el onclick del formulario
+
+		function calculaOperacion() {
+			//obtener los datos del formulario
+			var op1= parseFloat(document.getElementById('op1').value);
+			var op2= parseFloat(document.getElementById('op2').value);
+			var operador = document.getElementById('operacion').value;
+			//validar que todo es correcto
+
+			//hacer calculo
+			var total = eval(op1 + operador + op2);
+			//mostrar en formularioel resultado
+			document.getElementById('resultado').value = Math.ceil(total);
+			var textoSalida = (op1 + operador  + op2 + ' = ' + total);
+			document.getElementById('salida').value = textoSalida;
+			
+
+
+			/*alert('op1= ' + op1)
+			alert('op2= ' + op2)
+			alert('operador = ' + operador)
+			alert('resultado' + total) */
+
+			
+		}
+
+
+			
+		
+	</script>
+</head>
+<body>
+
+</body>
+	<main>
+		<form id="formulario">
+			<input type="number" name="Operador1" placeholder="introduce un numero" id="op1" required>
+			
+			<select id="operacion" name="operacion" required>
+									<option disabled selected>Seleccione operación</option>
+					  				<option value='+'>Sumar</option>
+					  				<option value='-'>Restar</option>
+					  				<option value='*'>Multiplicar</option>
+					  				<option value='/'>Dividir</option>
+					  				<option value='%'>Módulo</option>
+		 	</select>
+		 	<input type="number" name="Operador2" placeholder="introduce un numero" id="op2" required>
+		 	<label >=</label>
+	 		<input type="number" name="resultado" id="resultado" disabled>
+	 		<br><br>
+			<input type="button" name="calcular" value="CALCULAR" onclick="calculaOperacion()">
+			<br><br>
+			<input type="text" name="Salida" id="salida" disabled>
+	 		<br>
+			
+		</form>
+	</main>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta lang="es">
+	<meta name="description" content="Control HTML y CSS3"> 
+	<meta name="description" content="Free Web tutorials">
+  	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  	<meta name="author" content="Juan Carlos">
+	<title>maquetacion - guia </title>
+
+	<style type="text/css">
+		* {			
+			margin:5px;
+			padding: 0px;
+			font-style: arial;
+			box-sizing: border-box;
+		}
+
+		body {
+			width: 1000px;
+			height: 1000px;
+			border: 1px solid black;
+		}	
+
+		main {
+			width: 99%;
+			height: 99%;
+			border: 1px solid black;
+			background-color: lightgrey;
+			position: relative;
+		}
+
+		header {
+			width: 99%;
+			height: 150px;
+			border: 1px solid black;
+			background-color: lightyellow;
+			position: relative;
+			display: flex;
+			background: linear-gradient(-45deg, grey 35%,  lightgrey 75%);
+
+
+		}
+		img {
+			float:left; margin-right: 10px; margin-bottom: 2px;
+		}
+		h1 {
+			width: 100%;
+			top:50px;
+			position: absolute;
+			transition: translateX(-50%) translateY(-50%);
+			text-align: center;
+			background-color: green;
+			margin:0px;
+		}
+		nav	{
+			width: 350px;
+			height: 50px;
+			border: 1px solid black;
+			background-color: gold;
+			position: absolute;
+			bottom: 2px;
+			left:200px;
+			display: inline-block;
+			vertical-align: top;
+			margin:0px;
+			padding: 0px; 
+		}
+
+		nav ul li {
+			
+		}
+
+		section {
+			width: 72%;
+			height: 700px;
+			border: 1px solid black;
+			background-color: lightgreen;
+			display: inline-block;
+			vertical-align: top;
+			border-radius: 15px;
+			box-shadow: 4px 7px 7px darkblue;
+			background-color: -webkit-linear-gradient(45deg, rgba(0,0, 255,0.7) 20%, rgba(0,0,255,0.2));
+
+
+		}
+
+		article	{
+			width: 48%;
+			height: 200px;
+			border: 1px solid black;
+			background-color:#1CC8E2;
+			
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+		}
+		
+		aside {
+			width: 25%;
+			height: 500px;
+			border: 1px solid black;
+			background-color: green;
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+			float: right;
+		}
+		div {
+			display: block;
+			border: 1px solid red;
+			background-color: purple;
+			height: 80px;
+			overflow: auto;
+			text-align: justify;
+
+		}
+		footer {
+			width: 99%;
+			height: 100px;
+			border: 1px solid black;
+			background-color: red;
+		}
+
+	</style>
+
+	<script type="text/javascript"></script>
+</head>
+<body>
+	
+	<main>
+		<header>
+			<img src="img/logo.png">
+			<h1 class="titulo">header</h1>
+			<nav>
+			<h6>nav</h6>
+		</nav>
+		</header>
+		
+		<section id="section1">
+			<h6>section1</h6>
+			<article id="article1">
+				<h6>article1/ section1</h6>
+			</article>
+			<article id="article2">
+				<h6>article2/ section1</h6>
+			</article>
+			<article id="article3">
+				<h6>article3/ section1</h6>
+			</article>
+			<article id="article3">
+				<h6>article4/ section1</h6>
+			</article>
+		</section >
+		<aside>
+			<h6>aside</h6>
+			<div><h6>caja1</h6></div>
+			<div><h6>caja2</h6></div>
+		</aside>
+		<footer>
+			<h6>footer</h6>
+		</footer>
+	</main>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta lang="es">
+	<meta name="description" content="Control HTML y CSS3"> 
+	<meta name="description" content="Free Web tutorials">
+  	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  	<meta name="author" content="Juan Carlos">
+	<title>prompt</title>
+
+	<script type="text/javascript">
+		var continuar=true;
+		var cadena="";
+		var intro;
+		var total=0;
+		var valorMax=1000;
+		var valorMin=0;
+		do {
+			intro=parseInt(prompt('introduce una número entre 0 y 1000:'));
+				//comprobar isNaN si no es un número 
+			if (isNaN(intro) || intro > valorMax || intro < valorMin) {
+				alert(`${intro} no es un número válido  \n`);
+			} else {
+				total+=intro;
+			}	
+
+			continuar=confirm(`¿quieres introducir más números? `);
+		} while (continuar);
+		document.write(`Suma total ${total} <br>`)	
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
